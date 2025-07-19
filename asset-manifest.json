@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/PORTFOLIO/static/css/main.2a053914.css",
-    "main.js": "/PORTFOLIO/static/js/main.53c5f088.js",
-    "static/media/IMG_2566 1.png": "/PORTFOLIO/static/media/IMG_2566 1.f1130d93bb2e2f55fa11.png",
-    "static/media/Photo.png": "/PORTFOLIO/static/media/Photo.d769baef6dc2150d2667.png",
-    "static/media/Photo2.jpg": "/PORTFOLIO/static/media/Photo2.07bf28b3013d4cb7bb55.jpg",
-    "static/media/Mask Group.jpg": "/PORTFOLIO/static/media/Mask Group.97830ffcf68a8c249d4f.jpg",
-    "static/media/image.png": "/PORTFOLIO/static/media/image.322222f95a87e08c5ca8.png",
-    "static/media/image copy.png": "/PORTFOLIO/static/media/image copy.81f49b9a10315c991f64.png",
-    "static/media/Marvel_Studios_logo.svg.png": "/PORTFOLIO/static/media/Marvel_Studios_logo.svg.2a0356c23228bf66866a.png",
-    "static/media/React.svg": "/PORTFOLIO/static/media/React.f2c4ae5ddfb5b91c695eabee7e161f05.svg",
-    "static/media/University.svg": "/PORTFOLIO/static/media/University.029a36d8a8484c9eec4b912f77c5251e.svg",
-    "static/media/Developer.svg": "/PORTFOLIO/static/media/Developer.fa089e8bcbc41e678e288367c7781e74.svg",
-    "static/media/Courses.svg": "/PORTFOLIO/static/media/Courses.d84c46a08fdbc55685ea42a3b109721f.svg",
-    "static/media/css3.svg": "/PORTFOLIO/static/media/css3.e429c28db4d35e3bb6341570f3b74265.svg",
-    "static/media/JS.svg": "/PORTFOLIO/static/media/JS.656b841c79fca81fe0cd5e69458ae05b.svg",
-    "static/media/Close.svg": "/PORTFOLIO/static/media/Close.3fbfe47ce93f833a5c8700e006125c77.svg",
-    "index.html": "/PORTFOLIO/index.html",
-    "main.2a053914.css.map": "/PORTFOLIO/static/css/main.2a053914.css.map",
-    "main.53c5f088.js.map": "/PORTFOLIO/static/js/main.53c5f088.js.map"
+    "main.css": "/static/css/main.07a33360.css",
+    "main.js": "/static/js/main.34d40135.js",
+    "static/media/IMG_2566 1.png": "/static/media/IMG_2566 1.f1130d93bb2e2f55fa11.png",
+    "static/media/Photo.png": "/static/media/Photo.d769baef6dc2150d2667.png",
+    "static/media/Photo2.jpg": "/static/media/Photo2.07bf28b3013d4cb7bb55.jpg",
+    "static/media/Mask Group.jpg": "/static/media/Mask Group.97830ffcf68a8c249d4f.jpg",
+    "static/media/image.png": "/static/media/image.322222f95a87e08c5ca8.png",
+    "static/media/image copy.png": "/static/media/image copy.81f49b9a10315c991f64.png",
+    "static/media/Marvel_Studios_logo.svg.png": "/static/media/Marvel_Studios_logo.svg.2a0356c23228bf66866a.png",
+    "static/media/React.svg": "/static/media/React.f2c4ae5ddfb5b91c695eabee7e161f05.svg",
+    "static/media/University.svg": "/static/media/University.029a36d8a8484c9eec4b912f77c5251e.svg",
+    "static/media/Developer.svg": "/static/media/Developer.fa089e8bcbc41e678e288367c7781e74.svg",
+    "static/media/Courses.svg": "/static/media/Courses.d84c46a08fdbc55685ea42a3b109721f.svg",
+    "static/media/css3.svg": "/static/media/css3.e429c28db4d35e3bb6341570f3b74265.svg",
+    "static/media/JS.svg": "/static/media/JS.656b841c79fca81fe0cd5e69458ae05b.svg",
+    "static/media/Close.svg": "/static/media/Close.3fbfe47ce93f833a5c8700e006125c77.svg",
+    "index.html": "/index.html",
+    "main.07a33360.css.map": "/static/css/main.07a33360.css.map",
+    "main.34d40135.js.map": "/static/js/main.34d40135.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a053914.css",
-    "static/js/main.53c5f088.js"
+    "static/css/main.07a33360.css",
+    "static/js/main.34d40135.js"
   ]
 }
