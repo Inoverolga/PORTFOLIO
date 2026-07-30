@@ -1,0 +1,227 @@
+@import "../../index.scss";
+@import "../../style/title";
+@import "../../style/mixin";
+
+.promo {
+    min-height: 100vh; //ориентация на наш монитор
+
+    position: relative;
+    background: url("../../assets/images/IMG_2566\ 1.png") center center / cover
+        no-repeat;
+    &__subtitle {
+        padding-left: 10px;
+        position: relative; //относительно этого элемента будет располагаться кружок
+        @include before_circle;
+        z-index: 2;
+    }
+    .title {
+        &__fz16 {
+            padding-top: 206px;
+        }
+        &__fz48 {
+            margin-top: 3px;
+        }
+    }
+    &__btns {
+        display: flex;
+        column-gap: 44px;
+        margin-top: 25px;
+        font-size: 14px;
+    }
+    &__link {
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 12px 25px;
+        &-first {
+            width: 135px;
+            height: 45px;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+            background-color: $main-color;
+        }
+    }
+    .humburger {
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        //   padding-top: 20px;
+        //   padding-right: 30px;
+        display: flex;
+        row-gap: 6px;
+        justify-self: end;
+        flex-flow: column;
+        z-index: 10;
+        cursor: pointer;
+        span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: red;
+            &.line-second {
+                width: 36px;
+                transform: translateX(-6px);
+            }
+        }
+    }
+}
+
+.sidepenal {
+    position: fixed;
+    top: 300px;
+    transform: rotate(-90deg);
+    &__wrapper {
+        display: flex;
+        column-gap: 15px;
+
+        align-items: center;
+    }
+    &__messengers {
+        font-weight: 700;
+        font-size: 16px;
+        color: red;
+    }
+    &__line {
+        border: 2px solid #000;
+        width: 70px;
+        height: 0px;
+    }
+    &__icon {
+        color: #000;
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%; //изначально меню видно не будет
+    width: 100%;
+    height: 100vh;
+    z-index: 11;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+    &.active {
+        left: 0; //изначально меню видно не будет
+        visibility: visible;
+        opacity: 1;
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.75;
+    }
+    &__block {
+        position: fixed;
+        background: #ffa501;
+        width: 345px;
+        height: 100%;
+        z-index: 10;
+        left: 0; // Гарантирует появление слева
+        .close {
+            cursor: pointer;
+        }
+        .wrapper__icon {
+            padding: 24px 25px 0 25px;
+            display: flex;
+            justify-content: space-between;
+            .icon {
+                color: black;
+                display: inline-block; // Для корректного применения размеров
+                svg {
+                    // Все react-icons рендерятся как SVG
+                    width: 33px; // Нужный размер
+                    height: 33px;
+                }
+            }
+        }
+
+        .list__wrapper {
+            margin-top: 87px;
+            margin-left: 40px;
+            display: flex;
+            flex-flow: column;
+            row-gap: 15px;
+        }
+        li {
+            position: relative;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 24px;
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 5px;
+                    left: -35px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 100%;
+                    border: 1px solid black;
+                    transition: all 0.5s;
+                }
+                &:hover {
+                    &:before {
+                        background: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .sidepenal {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .promo {
+        .title__fz48 {
+            margin-top: 20px;
+            font-size: 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .promo {
+        .title__fz48 {
+            margin-top: 15px;
+            font-size: 26px;
+        }
+        .humburger {
+            right: 15px; //вместо пэдингов
+            top: 15px;
+        }
+    }
+    .menu {
+        &__block {
+            width: 250px;
+            .list__wrapper {
+                margin-left: 20px;
+            }
+            li {
+                font-size: 20px;
+            }
+        }
+        .wrapper__icon {
+            padding: 24px 25px 0 25px;
+        }
+        .close {
+            height: 27px;
+        }
+    }
+}

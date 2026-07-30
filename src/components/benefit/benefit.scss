@@ -1,0 +1,180 @@
+@import "../../style/mixin";
+@import "../../style/title";
+@import "../../index.scss";
+
+.benefit {
+    margin-top: 121px;
+    .title__benefit {
+        text-align: center;
+        position: relative;
+        @include before_circle;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .title__benefit-h2 {
+        text-align: center;
+    }
+    .line {
+        margin: 25px auto 0 auto;
+    }
+    &__grid {
+        margin-top: 60px;
+        padding: 0 80px;
+        display: grid;
+        grid-template-columns: repeat(2, 450px);
+        column-gap: 100px;
+    }
+    .title__resume {
+        position: relative;
+        padding-left: 35px; //от этой границы идут все геометрические фигуры
+        &::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background-color: $main-color;
+            left: -7px;
+            top: 50%; //!!!
+            transform: translateY(-50%); //!!!!
+        }
+    }
+    ul {
+        padding: 0;
+        list-style-type: none;
+        li {
+            position: relative;
+
+            &::after {
+                // полоска
+                content: "";
+                position: absolute;
+                width: 2px;
+                // height: 100%; //если не хотим чтобы палочка выходила за контент
+                height: calc(
+                    100% + 50px
+                ); //если хотим чтобы палочка выходила за контент на 50px
+                top: -9px; //чтобы палочка врезалась в гружок
+                left: 0;
+                background-color: black;
+            }
+        }
+    }
+    &__resume-item {
+        position: relative; //для палочки горизонтальной
+        &::before {
+            content: "";
+            height: 2px;
+            width: 42px;
+            position: absolute;
+            top: 66px;
+            background-color: black;
+        }
+        &-head {
+            position: relative; //для icon
+            padding-left: 100px;
+            padding-top: 45px;
+        }
+
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+            &-text {
+                line-height: 1.5;
+            }
+        }
+        &-icon {
+            position: absolute;
+            top: 26px;
+            left: 24px;
+            padding-left: 35px;
+            padding-top: 40px;
+            @include before_circle;
+            &::before {
+                left: 17px;
+                top: 25px;
+            }
+        }
+        span {
+            font-weight: 400;
+        }
+    }
+    .list-item {
+        list-style-type: circle;
+        padding-left: 30px;
+
+        li {
+            &.item::marker {
+                color: black; // Любой цвет
+            }
+        }
+        .item {
+            &::after {
+                content: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .benefit {
+        margin-top: 110px;
+        &__grid {
+            margin-top: 40px;
+            padding: 0 20px;
+            grid-template-columns: repeat(2, 450px);
+            column-gap: 10px;
+        }
+        .line {
+            margin: 20px auto 0 auto;
+        }
+
+        .title__fz36 {
+            font-size: 30px;
+        }
+        .title__benefit-h2 {
+            margin-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .benefit {
+        margin-top: 90px;
+        &__grid {
+            grid-template-columns: 500px;
+            margin-top: 0px;
+        }
+        .title__fz36 {
+            font-size: 26px;
+        }
+        .title__resume {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .benefit {
+        .title__fz36 {
+            font-size: 20px;
+        }
+        &__grid {
+            grid-template-columns: 280px;
+        }
+        &__resume-item-body-text {
+            font-size: 12px;
+        }
+        .title__resume {
+            margin-top: 40px;
+        }
+        .line {
+            margin: 10px auto 0 auto;
+        }
+    }
+}

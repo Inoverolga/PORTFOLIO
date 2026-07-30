@@ -1,0 +1,145 @@
+@import "../../style/mixin";
+@import "../../style/title";
+@import "../../index.scss";
+.aboutme {
+    margin-top: 145px;
+    &__foto-my {
+        width: 400px;
+        height: 600px;
+    }
+    &__fotoAndContent {
+        display: flex;
+        column-gap: 70px;
+    }
+    .title-aboutme {
+        position: relative;
+        @include before_circle;
+        &:before {
+            content: "";
+            top: 0px;
+        }
+        padding-top: 5px;
+        padding-left: 12px;
+    }
+    .title-myname {
+        margin-top: 20px;
+    }
+
+    &__text {
+        margin-top: 15px;
+        max-width: 570px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #000;
+        line-height: 1.5;
+    }
+    span {
+        font-weight: bold;
+    }
+    &__web-wrapper {
+        display: flex;
+        margin-top: 46px;
+        column-gap: 30px;
+    }
+    &__web-content {
+        display: flex;
+        flex-flow: column;
+        row-gap: 10px;
+        &-text {
+            max-width: 285px;
+            line-height: 1.5;
+        }
+    }
+    &__icon {
+        position: relative;
+        @include before_circle;
+
+        &:before {
+            top: 0;
+        }
+    }
+    svg {
+        margin-top: 14px;
+        margin-left: 15px;
+    }
+}
+
+.line {
+    margin-top: 7px;
+    display: block;
+    border: 3px solid #ffa501;
+    width: 60px;
+    height: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+    .aboutme {
+        &__fotoAndContent {
+            column-gap: 45px;
+        }
+        .title__fz36 {
+            font-size: 30px;
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .aboutme {
+        &__foto-my {
+            width: 400px;
+            height: 550px;
+        }
+        &__web-wrapper {
+            margin-top: 26px;
+            column-gap: 25px;
+        }
+        .title__fz36 {
+            font-size: 26px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aboutme {
+        margin-top: 40px;
+        &__fotoAndContent {
+            display: block;
+            column-gap: 20px;
+        }
+        &__foto-my {
+            width: 350px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        .content {
+            margin-top: 40px;
+        }
+
+        .title__fz36 {
+            margin-top: 5px;
+            font-size: 26px;
+        }
+        &__text {
+            padding-left: 15px;
+        }
+        &__web-wrapper {
+            padding-left: 35px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .aboutme {
+        &__foto-my {
+            width: 300px;
+            height: 430px;
+            margin: 0 auto;
+        }
+        .content {
+            margin-top: 20px;
+        }
+
+        .title__fz36 {
+            font-size: 20px;
+        }
+    }
+}
